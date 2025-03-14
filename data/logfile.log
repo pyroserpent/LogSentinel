@@ -1,0 +1,81 @@
+2025-03-13 19:58:01 - ERROR - Database connection failed.
+2025-03-13 19:58:03 - INFO - System running smoothly.
+2025-03-13 19:58:05 - ERROR - File not found: config.yaml.
+2025-03-13 19:58:07 - CRITICAL - Unauthorized access attempt detected!
+2025-03-13 19:58:09 - CRITICAL - System overheating! Immediate attention required.
+2025-03-13 19:58:11 - ERROR - File not found: config.yaml.
+2025-03-13 19:58:13 - INFO - Scheduled maintenance will start at midnight.
+2025-03-13 19:58:15 - INFO - User logged in successfully.
+2025-03-13 19:58:17 - ERROR - Database connection failed.
+2025-03-13 19:58:19 - INFO - Scheduled maintenance will start at midnight.
+2025-03-13 19:58:21 - ERROR - Database connection failed.
+2025-03-13 19:58:23 - WARNING - High memory usage detected.
+2025-03-13 19:58:25 - ERROR - Database connection failed.
+2025-03-13 19:58:27 - WARNING - High memory usage detected.
+2025-03-13 19:58:29 - WARNING - Disk space running low.
+2025-03-13 19:58:31 - ERROR - File not found: config.yaml.
+2025-03-13 19:58:33 - WARNING - High memory usage detected.
+2025-03-13 19:58:35 - INFO - System running smoothly.
+2025-03-13 19:58:37 - WARNING - High memory usage detected.
+2025-03-13 19:58:39 - INFO - System running smoothly.
+2025-03-13 20:05:07 - INFO - User logged in successfully.
+2025-03-13 20:05:09 - INFO - Scheduled maintenance will start at midnight.
+2025-03-13 20:05:11 - ERROR - Database connection failed.
+2025-03-13 20:05:13 - INFO - User logged in successfully.
+2025-03-13 20:05:15 - INFO - System running smoothly.
+2025-03-13 20:05:17 - INFO - User logged in successfully.
+2025-03-13 20:05:19 - CRITICAL - Unauthorized access attempt detected!
+2025-03-13 20:05:21 - INFO - User logged in successfully.
+2025-03-13 20:05:23 - INFO - Scheduled maintenance will start at midnight.
+2025-03-13 20:05:25 - ERROR - Database connection failed.
+2025-03-13 20:05:27 - ERROR - Application crashed due to unknown error.
+2025-03-13 20:05:29 - ERROR - Application crashed due to unknown error.
+2025-03-13 20:05:31 - INFO - User logged in successfully.
+2025-03-13 20:05:33 - CRITICAL - Unauthorized access attempt detected!
+2025-03-13 20:05:35 - INFO - Scheduled maintenance will start at midnight.
+2025-03-13 20:05:37 - CRITICAL - System overheating! Immediate attention required.
+2025-03-13 20:05:39 - WARNING - High memory usage detected.
+2025-03-13 20:05:41 - CRITICAL - Unauthorized access attempt detected!
+2025-03-13 20:05:43 - ERROR - Application crashed due to unknown error.
+2025-03-13 20:05:45 - CRITICAL - Unauthorized access attempt detected!
+2025-03-13 15:00:00 - ERROR - Test Error Detected
+2025-03-13 20:13:54 - ERROR - Database connection failed.
+2025-03-13 20:13:56 - WARNING - Disk space running low.
+2025-03-13 20:13:58 - ERROR - File not found: config.yaml.
+2025-03-13 20:14:00 - ERROR - File not found: config.yaml.
+2025-03-13 20:14:02 - WARNING - High memory usage detected.
+2025-03-13 20:14:04 - INFO - System running smoothly.
+2025-03-13 20:14:06 - INFO - User logged in successfully.
+2025-03-13 20:14:08 - INFO - System running smoothly.
+2025-03-13 20:14:10 - INFO - System running smoothly.
+2025-03-13 20:14:12 - INFO - Scheduled maintenance will start at midnight.
+2025-03-13 20:14:14 - CRITICAL - System overheating! Immediate attention required.
+2025-03-13 20:14:16 - WARNING - High memory usage detected.
+2025-03-13 20:14:18 - INFO - User logged in successfully.
+2025-03-13 20:14:20 - INFO - User logged in successfully.
+2025-03-13 20:14:22 - ERROR - File not found: config.yaml.
+2025-03-13 20:14:24 - INFO - User logged in successfully.
+2025-03-13 20:14:26 - ERROR - Application crashed due to unknown error.
+2025-03-13 20:14:28 - CRITICAL - Unauthorized access attempt detected!
+2025-03-13 20:14:30 - INFO - User logged in successfully.
+2025-03-13 20:14:32 - CRITICAL - System overheating! Immediate attention required.
+2025-03-13 20:16:49 - INFO - User logged in successfully.
+2025-03-13 20:16:51 - CRITICAL - Unauthorized access attempt detected!
+2025-03-13 20:16:53 - ERROR - File not found: config.yaml.
+2025-03-13 20:16:55 - WARNING - High memory usage detected.
+2025-03-13 20:16:57 - CRITICAL - Unauthorized access attempt detected!
+2025-03-13 20:16:59 - WARNING - High memory usage detected.
+2025-03-13 20:17:01 - WARNING - Disk space running low.
+2025-03-13 20:17:03 - CRITICAL - System overheating! Immediate attention required.
+2025-03-13 20:17:05 - CRITICAL - Unauthorized access attempt detected!
+2025-03-13 20:17:07 - ERROR - File not found: config.yaml.
+2025-03-13 20:17:09 - ERROR - Database connection failed.
+2025-03-13 20:17:11 - ERROR - Database connection failed.
+2025-03-13 20:17:13 - ERROR - Database connection failed.
+2025-03-13 20:17:15 - ERROR - File not found: config.yaml.
+2025-03-13 20:17:17 - INFO - User logged in successfully.
+2025-03-13 20:17:19 - CRITICAL - System overheating! Immediate attention required.
+2025-03-13 20:17:21 - CRITICAL - Unauthorized access attempt detected!
+2025-03-13 20:17:23 - ERROR - Application crashed due to unknown error.
+2025-03-13 20:17:25 - CRITICAL - Unauthorized access attempt detected!
+2025-03-13 20:17:27 - INFO - User logged in successfully.

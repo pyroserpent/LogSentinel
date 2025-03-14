@@ -3,7 +3,15 @@ import time
 import random
 
 # Define log file name
-LOG_FILE_PATH = "logfile.log"
+import os
+
+# Ensure 'data/' folder exists before saving the log file
+DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
+if not os.path.exists(DATA_DIR):
+    os.makedirs(DATA_DIR)  # Create 'data/' if it doesn't exist
+
+LOG_FILE_PATH = os.path.join(DATA_DIR, "logfile.log")
+
 
 # Configure logging
 logging.basicConfig(
