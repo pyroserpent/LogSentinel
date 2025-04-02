@@ -1,3 +1,15 @@
+"""
+LogSentinel - monitor_logs.py
+
+Monitors logfile.log for critical issues (ERROR, CRITICAL, FAILURE)
+and logs simulated email alerts to alerts.log.
+
+Key Features:
+- Real-time file monitoring via watchdog
+- Graceful shutdown with log trail
+- Unicode-safe logging (UTF-8 for emoji support)
+- Fault-tolerant and production-ready structure
+"""
 import re  # Regular expressions for pattern matching
 import time # Time module for sleep intervals
 import os # For file and directory operations
@@ -18,17 +30,24 @@ class LogFileHandler(FileSystemEventHandler):
 
     def on_modified(self, event): 
         """Triggered when the log file is modified."""
-        if os.path.abspath(event.src_path) == self.file_path: # Check if the modified file is the log file
-            with open(self.file_path, 'r') as f:
-                f.seek(self.last_position)  # Move to last read position
-                new_lines = f.readlines() # Read new lines from the log file
-                self.last_position = f.tell()  # Update position
-                # Check for error patterns in new lines
-                for line in new_lines:
-                    if re.search(r'ERROR|CRITICAL|FAILURE', line): # Look for error patterns
-                        alert_message = f"🚨 EMAIL ALERT: {line.strip()}\n" # Format alert message
-                        print(alert_message)  # Print to console
-                        self.log_alert(alert_message)  # Log to file
+        if os.path.abspath(event.src_path) == self.file_path:  # Check if the modified file is the log file
+            if not os.path.exists(self.file_path):
+                print(f"⚠️ Log file '{self.file_path}' no longer exists.")
+                return
+            try:
+                with open(self.file_path, 'r', encoding='utf-8' ) as f:
+                    f.seek(self.last_position)  # Move to last read position
+                    new_lines = f.readlines()  # Read new lines from the log file
+                    self.last_position = f.tell()  # Update position
+                    # Check for error patterns in new lines
+                    for line in new_lines:
+                        if re.search(r'ERROR|CRITICAL|FAILURE', line):  # Look for error patterns
+                            alert_message = f"🚨 EMAIL ALERT: {line.strip()}\n"  # Format alert message
+                            print(alert_message)  # Print to console
+                            self.log_alert(alert_message)  # Log to file
+            except Exception as e:
+                error_msg =f"⚠️ Error processing log file at {time.strftime('%Y-%m-%d %H:%M:%S')}: {e}\n"  # Format error message with timestamp
+                print(error_msg)  # Print error to console
 
     def log_alert(self, message):
         """Log the alert message to alerts.log."""
@@ -44,16 +63,16 @@ if __name__ == "__main__":
     print(f"🔍 Monitoring {LOG_FILE_PATH} for errors...")
 
     event_handler = LogFileHandler(LOG_FILE_PATH, ALERTS_FILE_PATH) # Create an instance of the log file handler
-    observer = Observer() # Create an observer to monitor file system events
-    observer.schedule(event_handler, path=os.path.dirname(LOG_FILE_PATH), recursive=False) # Schedule the handler for the directory containing the log file
-
-    observer.start() # Start the observer (monitoring)
-    try:
+try:    
+    with Observer() as observer:
+        observer.schedule(event_handler, path=os.path.dirname(LOG_FILE_PATH), recursive=False)
+        observer.start()
+        print(f"🔍 Monitoring started on {LOG_FILE_PATH} for errors...")
         while True:
-            time.sleep(1) # Keep the script running, check for events every second
-    except KeyboardInterrupt:
-        observer.stop() # Stop the observer if a keyboard interrupt (Ctrl+C) is detected
-        print("\n🛑 Monitoring stopped.")
-    observer.join() # Wait for the observer to finish
-    
-# This script monitors a log file for specific error patterns and logs alerts to another file.
+            time.sleep(1)
+except KeyboardInterrupt:
+    print("\n🛑 Monitoring stopped.")
+    event_handler.log_alert("Monitoring stopped by user.\n")  ## Log the stop event
+except Exception as e:
+    print(f"⚠️ Unhandled exception: {e}") # Log any unhandled exceptions
+
